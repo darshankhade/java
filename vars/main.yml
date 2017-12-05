@@ -1,0 +1,15 @@
+---
+# vars file for java
+profile_path: /opt/java
+java_home1: /etc/profile
+owner: admin12
+group: admin12
+package_name: java-1.8.0-openjdk-devel.x86_64
+absent_items:
+  - JAVA_HOME
+  - java
+java_path:
+ - export JAVA_HOME='/opt/java/bin/java'
+ - export PATH=$JAVA_HOME/bin:$PATH
+
+

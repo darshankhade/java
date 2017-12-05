@@ -1,0 +1,12 @@
+---
+ - name: creating installation directory
+   file:
+     path: "{{ profile_path }}"
+     state: directory
+     owner: "{{ owner }}"
+     group: "{{ owner }}"
+     recurse: yes
+     mode: 0755
+   become: true
+   tags: create_installation_dir
+

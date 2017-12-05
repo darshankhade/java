@@ -1,0 +1,7 @@
+---
+ - include: create_installation_dir.yml
+   tags: create_installation_dir
+ - include: installing_pkg.yml
+   tags: install_pkg
+ - include: JAVA_PATH.yml
+   tags: JAVA_PATH

@@ -1,0 +1,18 @@
+---
+ - name: Deleting previous entry from profile
+   lineinfile:
+     path: "{{ profile_path }}"
+     regexp: "{{ item }}"
+     state: absent
+   with_items: "{{ absent_items }}"
+   become: true
+   tags: delete_entries
+ - name: setting environmental variables for java home
+   lineinfile:
+    path: "{{ profile_path }}"
+    line: "{{ item }}"
+    state: present
+   with_items: "{{ java_path }}"
+   become: true
+   tags: set java home
+

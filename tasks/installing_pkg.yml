@@ -1,0 +1,8 @@
+---
+ - name: installing java package
+   yum:
+    name: java-1.6.0-openjdk-devel
+    state: present
+   become: true
+   tags: install_pkg
+
